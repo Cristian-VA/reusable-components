@@ -5,12 +5,23 @@ import Avatar from "./Avatar"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { FaMoneyBill, FaGoogle } from "react-icons/fa"
 import {FaRegUser} from "react-icons/fa6"
+
 import Menu from "./Menu/Menu"
 import MenuButton from "./Menu/MenuButton"
 import MenuDropdown from "./Menu/MenuDropdown"
-
+import MenuItem from "./Menu/MenuItem"
 
 export default function App() {
+  const sports = ["Tennis", "Pickleball", "Racquetball", "Squash"]
+
+  const sportsArray = sports.map(sport=>{
+    // puedes agregar un Link de react router tmb
+    return (
+      <MenuItem>
+      <a href="#">{sport}</a>
+      </MenuItem>
+    )
+  })
   return (
     <main>
       <Button type="Danger" size="sm" onClick={()=> console.log()}> hello </Button>
@@ -31,10 +42,14 @@ export default function App() {
 
       
 
-      <Menu>  
-        <MenuButton buttonText="Sports"/>
-        <MenuDropdown items={["Tennis", "Racquetball", "Pickleball", "Squash"]}/>
+      <Menu> 
+        <MenuButton>Sports</MenuButton>
+        {sportsArray}
+        <MenuDropdown>
+        </MenuDropdown>  
       </Menu>
     </main>
   )
 }
+
+ //Menu es un div vacio al que se le pasan  Menu button y dropdown como children

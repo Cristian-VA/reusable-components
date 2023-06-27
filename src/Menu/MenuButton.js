@@ -1,8 +1,8 @@
 import React from "react"
 import Button from "../Button"
 
-export default function MenuButton({ buttonText, onClick }) {
+export default function MenuButton({ children, onClick }) {
     return (
-        <Button type="Danger" onClick={onClick}>{buttonText}</Button>
+        <Button type="Danger" onClick={onClick}>{children}</Button>
     )
 }
