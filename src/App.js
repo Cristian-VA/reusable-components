@@ -11,6 +11,11 @@ import MenuButton from "./Menu/MenuButton"
 import MenuDropdown from "./Menu/MenuDropdown"
 import MenuItem from "./Menu/MenuItem"
 
+
+import Star from "./Star"
+import Toggle from "./Toggle/index"
+import { BsStar, BsStarFill } from "react-icons/bs"
+
 export default function App() {
   const sports = ["Tennis", "Pickleball", "Racquetball", "Squash", "Football"]
 
@@ -48,8 +53,19 @@ export default function App() {
             {sportsArray}
           </MenuDropdown>  
       </Menu>
+
+
+      <Toggle>
+        <Toggle.Button>
+        <Toggle.On ><BsStar /> </Toggle.On>
+        <Toggle.Of><BsStarFill/></Toggle.Of>
+        </Toggle.Button>
+       
+      </Toggle>
     </main>
   )
 }
 
  //Menu es un div vacio al que se le pasan  Menu button y dropdown como children
+
+ 

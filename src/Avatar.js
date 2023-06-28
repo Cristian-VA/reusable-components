@@ -35,7 +35,7 @@ color:white;
 `
 
 export default function Button(props) {
-    console.log(props)
+ 
 
 const isAnon = !props.children && !props.src?  <FaRegUser className="w-10 h-10 text-white" /> : props.children
 

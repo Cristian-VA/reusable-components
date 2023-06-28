@@ -58,7 +58,7 @@ const StyledButton = styled.button`
 `
 
 export default function Button(props) {
-    console.log(props)
+   
   return (
    <StyledButton size={props.size} type={props.type} onClick={props.onClick}>{props.children}</StyledButton>
   )
