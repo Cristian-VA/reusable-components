@@ -2,17 +2,22 @@ import React from "react"
 
 const ToggleContext = React.createContext()
 
-export default function Toggle(props) {
+export default function Toggle({children, onToggle}) {
   const [on, setOn] = React.useState(false)
-    
+  
+ 
+  React.useEffect(()=>{
+    onToggle()
+  },[on])
+
   function toggle() {
       setOn(prevOn => !prevOn)
-      console.log("works")
+      
   }
 
   return (
     <ToggleContext.Provider value={{on, toggle}}>
-    {props.children}
+    {children}
     </ToggleContext.Provider>
   )
 
@@ -21,3 +26,9 @@ export default function Toggle(props) {
 export {ToggleContext}
 
 //el children es como quieres que se vea el boton
+//React.useEffect(() => {
+//  fetch("https://opentdb.com/api.php?amount=4&type=multiple")
+//      .then(res => res.json())
+//      .then(data => setQuestions(data.results))
+//
+//}, [])

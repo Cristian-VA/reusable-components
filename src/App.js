@@ -14,6 +14,8 @@ import MenuItem from "./Menu/MenuItem"
 
 import Star from "./Star"
 import Toggle from "./Toggle/index"
+import Henu from "./Henu/index"
+
 import { BsStar, BsStarFill } from "react-icons/bs"
 
 export default function App() {
@@ -55,17 +57,41 @@ export default function App() {
       </Menu>
 
 
-      <Toggle>
-        <Toggle.Button>
-        <Toggle.On ><BsStar /> </Toggle.On>
-        <Toggle.Of><BsStarFill/></Toggle.Of>
-        </Toggle.Button>
-       
-      </Toggle>
+
+
+
+
+
+      
+        <Henu onOpen={() => console.log("Menu toggled")}>
+         <Toggle.Button>
+            <Henu.Button>Sports</Henu.Button>
+         </Toggle.Button>
+
+          <Toggle.On>
+            <Henu.Dropdown>
+              <Henu.Item> Football</Henu.Item>
+              <Henu.Item> Cricket</Henu.Item>
+              <Henu.Item> Softball</Henu.Item>
+            </Henu.Dropdown>
+          </Toggle.On>
+        </Henu>
+  
     </main>
   )
 }
 
  //Menu es un div vacio al que se le pasan  Menu button y dropdown como children
+ //Henu es utilizando el headless component que es toggle en vez de usando Context como lo es Menu
 
- 
+ //puedes poner crear un componente con todo los toggle para que se vea mejor, copiar y pegar en un solo componente
+
+
+
+
+      // <Toggle onToggle={() => console.log("Toggled")}>
+     //   <Toggle.Button>
+     //   <Toggle.On><BsStar className="star" /></Toggle.On>
+     //   <Toggle.Of><BsStarFill className="star filled" /></Toggle.Of>
+     //   </Toggle.Button>
+     // </Toggle>
