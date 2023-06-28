@@ -44,9 +44,9 @@ export default function App() {
 
       <Menu> 
         <MenuButton>Sports</MenuButton>
-        {sportsArray}
-        <MenuDropdown>
-        </MenuDropdown>  
+          <MenuDropdown>
+          {sportsArray}
+          </MenuDropdown>  
       </Menu>
     </main>
   )
