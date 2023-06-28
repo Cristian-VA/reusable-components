@@ -57,8 +57,12 @@ export default function App() {
       </Menu>
 
 
-
-
+      <Toggle>
+      <Toggle.Button>
+      <Toggle.On><BsStar className="star" /></Toggle.On>
+      <Toggle.Of><BsStarFill className="star filled" /></Toggle.Of>
+      </Toggle.Button>
+    </Toggle>
 
 
 
@@ -88,10 +92,3 @@ export default function App() {
 
 
 
-
-      // <Toggle onToggle={() => console.log("Toggled")}>
-     //   <Toggle.Button>
-     //   <Toggle.On><BsStar className="star" /></Toggle.On>
-     //   <Toggle.Of><BsStarFill className="star filled" /></Toggle.Of>
-     //   </Toggle.Button>
-     // </Toggle>
