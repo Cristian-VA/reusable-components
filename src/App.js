@@ -12,7 +12,7 @@ import MenuDropdown from "./Menu/MenuDropdown"
 import MenuItem from "./Menu/MenuItem"
 
 export default function App() {
-  const sports = ["Tennis", "Pickleball", "Racquetball", "Squash"]
+  const sports = ["Tennis", "Pickleball", "Racquetball", "Squash", "Football"]
 
   const sportsArray = sports.map(sport=>{
     // puedes agregar un Link de react router tmb
@@ -45,7 +45,7 @@ export default function App() {
       <Menu> 
         <MenuButton>Sports</MenuButton>
           <MenuDropdown>
-          {sportsArray}
+            {sportsArray}
           </MenuDropdown>  
       </Menu>
     </main>
